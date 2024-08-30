@@ -2167,7 +2167,10 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
       }
       
       p = p + theme_bw1()
-      print(p)
+ 
+      # RS 2024.08.29 Return plot object instead of printing
+      return(p)
+      # print(p)
     
   } else if (is.null(class(plot.theme)))  {
     
@@ -2178,8 +2181,9 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
       }
       
     p = p + theme_bw1()
-    print(p)
-    
+      # RS 2024.08.29 Return plot object instead of printing
+      return(p)
+      # print(p)    
   } else if (!inherits(plot.theme, "theme")) {
     
     cat("Error: 'plot.theme' is not a valid ggplot theme object. Using default theme\n")
@@ -2189,13 +2193,15 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
       }
       
     p = p + theme_bw1()
-    print(p)
-    
+      # RS 2024.08.29 Return plot object instead of printing
+      return(p)
+      # print(p)    
     # otherwise use the user-passed theme
   } else {
     p = p + plot.theme
-    print(p)
-  }
+      # RS 2024.08.29 Return plot object instead of printing
+      return(p)
+      # print(p)  }
   
   #console message with level to hold resp vars as
   if (length(covariate.values) > 1) {
