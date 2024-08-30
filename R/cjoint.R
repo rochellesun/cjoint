@@ -2167,9 +2167,7 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
       }
       
       p = p + theme_bw1()
- 
-      # RS 2024.08.29 Return plot object instead of printing
-      return(p)
+       # RS 2024.08.29 Return plot object instead of printing
       # print(p)
     
   } else if (is.null(class(plot.theme)))  {
@@ -2182,7 +2180,6 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
       
     p = p + theme_bw1()
       # RS 2024.08.29 Return plot object instead of printing
-      return(p)
       # print(p)    
   } else if (!inherits(plot.theme, "theme")) {
     
@@ -2194,13 +2191,11 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
       
     p = p + theme_bw1()
       # RS 2024.08.29 Return plot object instead of printing
-      return(p)
       # print(p)    
     # otherwise use the user-passed theme
   } else {
     p = p + plot.theme
       # RS 2024.08.29 Return plot object instead of printing
-      return(p)
       # print(p)  }
   
   #console message with level to hold resp vars as
@@ -2220,7 +2215,7 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
     }
     cat(resp.message,"\n")
   }
-  
+  return(p)
 }
 #####################
 # dependencies
