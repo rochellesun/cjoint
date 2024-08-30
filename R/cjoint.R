@@ -2196,7 +2196,8 @@ plot.amce <- function(x, main="", xlab="Change in E[Y]", ci=.95, colors=NULL, xl
   } else {
     p = p + plot.theme
       # RS 2024.08.29 Return plot object instead of printing
-      # print(p)  }
+      # print(p)  
+  }
   
   #console message with level to hold resp vars as
   if (length(covariate.values) > 1) {
